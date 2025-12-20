@@ -12,7 +12,7 @@ const configs: BuildOptions[] = [
     },
     plugins: [hmr("react.js")],
     experimental: {
-      hmr: true,
+      devMode: true,
     },
   },
   {
@@ -28,7 +28,7 @@ const configs: BuildOptions[] = [
     external: ["react"],
     plugins: [hmr("react-dom.js")],
     experimental: {
-      hmr: true,
+      devMode: true,
     },
   },
   {
@@ -44,7 +44,7 @@ const configs: BuildOptions[] = [
     external: ["react"],
     plugins: [hmr("jsx-dev-runtime.js")],
     experimental: {
-      hmr: true,
+      devMode: true,
     },
   },
   {
@@ -60,7 +60,7 @@ const configs: BuildOptions[] = [
     external: ["react"],
     plugins: [hmr("jsx-runtime.js")],
     experimental: {
-      hmr: true,
+      devMode: true,
     },
   },
   {
@@ -78,7 +78,7 @@ const configs: BuildOptions[] = [
     external: ["react", "react-dom", "react/jsx-runtime"],
     plugins: [hmr("fluentui.js")],
     experimental: {
-      hmr: true,
+      devMode: true,
     },
   },
 ];
