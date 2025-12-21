@@ -1,5 +1,18 @@
-import { type BuildOptions } from "rolldown";
+import { type BuildOptions, type Plugin } from "rolldown";
 import { dev } from "rolldown/experimental";
+
+function wss(name: string): Plugin {
+  return {
+    name: "wss-plugin",
+    generateBundle(_, bundle) {
+      const file = bundle[name];
+
+      if (file.type === "chunk") {
+        file.code = file.code.replace("ws://", "wss://");
+      }
+    },
+  };
+}
 
 const configs: BuildOptions[] = [
   {
@@ -9,6 +22,7 @@ const configs: BuildOptions[] = [
       format: "umd",
       name: "React",
     },
+    plugins: [wss("react.js")],
     experimental: {
       devMode: true,
     },
@@ -24,6 +38,7 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react"],
+    plugins: [wss("react-dom.js")],
     experimental: {
       devMode: true,
     },
@@ -39,6 +54,7 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react"],
+    plugins: [wss("jsx-dev-runtime.js")],
     experimental: {
       devMode: true,
     },
@@ -54,6 +70,7 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react"],
+    plugins: [wss("jsx-runtime.js")],
     experimental: {
       devMode: true,
     },
@@ -71,6 +88,7 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react", "react-dom", "react/jsx-runtime"],
+    plugins: [wss("fluentui.js")],
     experimental: {
       devMode: true,
     },
