@@ -46,9 +46,9 @@
       manifestVersion: 2,
       loaderConfig: {
         internalModuleBaseUrls: ["https://localhost:4321/dist/"],
-        entryModuleId: "React",
+        entryModuleId: "react",
         scriptResources: {
-          React: {
+          react: {
             type: "path",
             path: "react.js",
           },
@@ -63,13 +63,13 @@
       manifestVersion: 2,
       loaderConfig: {
         internalModuleBaseUrls: ["https://localhost:4321/dist/"],
-        entryModuleId: "ReactDOM",
+        entryModuleId: "react-dom",
         scriptResources: {
-          ReactDOM: {
+          "react-dom": {
             type: "path",
             path: "react-dom.js",
           },
-          React: {
+          react: {
             type: "component",
             id: "eab134f0-159f-4209-807e-d2d12ae7236e",
             version: "18.3.1",
@@ -85,13 +85,13 @@
       manifestVersion: 2,
       loaderConfig: {
         internalModuleBaseUrls: ["https://localhost:4321/dist/"],
-        entryModuleId: "JsxDevRuntime",
+        entryModuleId: "react/jsx-dev-runtime",
         scriptResources: {
-          JsxDevRuntime: {
+          "react/jsx-dev-runtime": {
             type: "path",
             path: "jsx-dev-runtime.js",
           },
-          React: {
+          react: {
             type: "component",
             id: "eab134f0-159f-4209-807e-d2d12ae7236e",
             version: "18.3.1",
@@ -107,9 +107,9 @@
       manifestVersion: 2,
       loaderConfig: {
         internalModuleBaseUrls: ["https://localhost:4321/dist/"],
-        entryModuleId: "JsxRuntime",
+        entryModuleId: "react/jsx-runtime",
         scriptResources: {
-          JsxRuntime: {
+          "react/jsx-runtime": {
             type: "path",
             path: "jsx-runtime.js",
           },
@@ -129,23 +129,23 @@
       manifestVersion: 2,
       loaderConfig: {
         internalModuleBaseUrls: ["https://localhost:4321/dist/"],
-        entryModuleId: "FluentUI",
+        entryModuleId: "@fluentui/react-components",
         scriptResources: {
-          FluentUI: {
+          "@fluentui/react-components": {
             type: "path",
             path: "fluentui.js",
           },
-          React: {
+          react: {
             type: "component",
             id: "eab134f0-159f-4209-807e-d2d12ae7236e",
             version: "18.3.1",
           },
-          ReactDOM: {
+          "react-dom": {
             type: "component",
             id: "06af936b-b724-4ddd-919b-63380f389af8",
             version: "18.3.1",
           },
-          JsxRuntime: {
+          "react/jsx-runtime": {
             type: "component",
             id: "ad2188ed-abb5-4b38-bcc6-aa1f23a7e1de",
             version: "18.3.1",
