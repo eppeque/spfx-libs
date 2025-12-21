@@ -113,7 +113,7 @@
             type: "path",
             path: "jsx-runtime.js",
           },
-          React: {
+          react: {
             type: "component",
             id: "eab134f0-159f-4209-807e-d2d12ae7236e",
             version: "18.3.1",
