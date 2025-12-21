@@ -69,6 +69,11 @@
             type: "path",
             path: "react-dom.js",
           },
+          React: {
+            type: "component",
+            id: "eab134f0-159f-4209-807e-d2d12ae7236e",
+            version: "18.3.1",
+          },
         },
       },
     },
@@ -85,6 +90,11 @@
           JsxDevRuntime: {
             type: "path",
             path: "jsx-dev-runtime.js",
+          },
+          React: {
+            type: "component",
+            id: "eab134f0-159f-4209-807e-d2d12ae7236e",
+            version: "18.3.1",
           },
         },
       },
@@ -103,6 +113,11 @@
             type: "path",
             path: "jsx-runtime.js",
           },
+          React: {
+            type: "component",
+            id: "eab134f0-159f-4209-807e-d2d12ae7236e",
+            version: "18.3.1",
+          },
         },
       },
     },
@@ -119,6 +134,21 @@
           FluentUI: {
             type: "path",
             path: "fluentui.js",
+          },
+          React: {
+            type: "component",
+            id: "eab134f0-159f-4209-807e-d2d12ae7236e",
+            version: "18.3.1",
+          },
+          ReactDOM: {
+            type: "component",
+            id: "06af936b-b724-4ddd-919b-63380f389af8",
+            version: "18.3.1",
+          },
+          JsxRuntime: {
+            type: "component",
+            id: "ad2188ed-abb5-4b38-bcc6-aa1f23a7e1de",
+            version: "18.3.1",
           },
         },
       },
