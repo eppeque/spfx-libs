@@ -1,6 +1,5 @@
 import { type BuildOptions } from "rolldown";
 import { dev } from "rolldown/experimental";
-import hmr from "./plugin";
 
 const configs: BuildOptions[] = [
   {
@@ -10,7 +9,6 @@ const configs: BuildOptions[] = [
       format: "umd",
       name: "React",
     },
-    plugins: [hmr("react.js")],
     experimental: {
       devMode: true,
     },
@@ -26,7 +24,6 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react"],
-    plugins: [hmr("react-dom.js")],
     experimental: {
       devMode: true,
     },
@@ -42,7 +39,6 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react"],
-    plugins: [hmr("jsx-dev-runtime.js")],
     experimental: {
       devMode: true,
     },
@@ -58,7 +54,6 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react"],
-    plugins: [hmr("jsx-runtime.js")],
     experimental: {
       devMode: true,
     },
@@ -76,7 +71,6 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react", "react-dom", "react/jsx-runtime"],
-    plugins: [hmr("fluentui.js")],
     experimental: {
       devMode: true,
     },
