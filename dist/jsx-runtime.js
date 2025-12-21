@@ -297,8 +297,8 @@ react = __toESM(react);
 		};
 		document.body.appendChild(script);
 	}
-	console.debug("HMR runtime loaded", "localhost:3000");
-	const addr = new URL("wss://localhost:3000");
+	console.debug("HMR runtime loaded", "localhost:4321");
+	const addr = new URL("wss://localhost:4321");
 	const socket = new WebSocket(addr);
 	globalThis.__rolldown_runtime__ ??= new DefaultDevRuntime(socket);
 	/** @param {MessageEvent} event */

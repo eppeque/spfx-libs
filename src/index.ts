@@ -14,6 +14,13 @@ function wss(name: string): Plugin {
   };
 }
 
+const experimental = {
+  devMode: {
+    host: "localhost",
+    port: 4321,
+  },
+};
+
 const configs: BuildOptions[] = [
   {
     input: "esm/react.js",
@@ -23,9 +30,7 @@ const configs: BuildOptions[] = [
       name: "React",
     },
     plugins: [wss("react.js")],
-    experimental: {
-      devMode: true,
-    },
+    experimental,
   },
   {
     input: "esm/react-dom.js",
@@ -39,9 +44,7 @@ const configs: BuildOptions[] = [
     },
     external: ["react"],
     plugins: [wss("react-dom.js")],
-    experimental: {
-      devMode: true,
-    },
+    experimental,
   },
   {
     input: "esm/jsx-dev-runtime.js",
@@ -55,9 +58,7 @@ const configs: BuildOptions[] = [
     },
     external: ["react"],
     plugins: [wss("jsx-dev-runtime.js")],
-    experimental: {
-      devMode: true,
-    },
+    experimental,
   },
   {
     input: "esm/jsx-runtime.js",
@@ -71,9 +72,7 @@ const configs: BuildOptions[] = [
     },
     external: ["react"],
     plugins: [wss("jsx-runtime.js")],
-    experimental: {
-      devMode: true,
-    },
+    experimental,
   },
   {
     input: "node_modules/@fluentui/react-components/lib/index.js",
@@ -89,9 +88,7 @@ const configs: BuildOptions[] = [
     },
     external: ["react", "react-dom", "react/jsx-runtime"],
     plugins: [wss("fluentui.js")],
-    experimental: {
-      devMode: true,
-    },
+    experimental,
   },
 ];
 
