@@ -129,9 +129,9 @@
       manifestVersion: 2,
       loaderConfig: {
         internalModuleBaseUrls: ["https://localhost:4321/dist/"],
-        entryModuleId: "fluentui",
+        entryModuleId: "@fluentui/react-components",
         scriptResources: {
-          fluentui: {
+          "@fluentui/react-components": {
             type: "path",
             path: "fluentui.js",
           },
