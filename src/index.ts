@@ -1,24 +1,9 @@
 import { type BuildOptions, type Plugin } from "rolldown";
 import { dev } from "rolldown/experimental";
-
-function wss(name: string): Plugin {
-  return {
-    name: "wss-plugin",
-    generateBundle(_, bundle) {
-      const file = bundle[name];
-
-      if (file.type === "chunk") {
-        file.code = file.code.replace("ws://", "wss://");
-      }
-    },
-  };
-}
+import hmr from "./hmr";
 
 const experimental = {
-  devMode: {
-    host: "localhost",
-    port: 4321,
-  },
+  devMode: true,
 };
 
 const configs: BuildOptions[] = [
@@ -29,8 +14,8 @@ const configs: BuildOptions[] = [
       format: "umd",
       name: "React",
     },
-    plugins: [wss("react.js")],
-    experimental
+    plugins: [hmr("react.js")],
+    experimental,
   },
   {
     input: "esm/react-dom.js",
@@ -43,8 +28,8 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react"],
-    plugins: [wss("react-dom.js")],
-    experimental
+    plugins: [hmr("react-dom.js")],
+    experimental,
   },
   {
     input: "esm/jsx-dev-runtime.js",
@@ -57,8 +42,8 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react"],
-    plugins: [wss("jsx-dev-runtime.js")],
-    experimental
+    plugins: [hmr("jsx-dev-runtime.js")],
+    experimental,
   },
   {
     input: "esm/jsx-runtime.js",
@@ -71,8 +56,8 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react"],
-    plugins: [wss("jsx-runtime.js")],
-    experimental
+    plugins: [hmr("jsx-runtime.js")],
+    experimental,
   },
   {
     input: "node_modules/@fluentui/react-components/lib/index.js",
@@ -87,8 +72,8 @@ const configs: BuildOptions[] = [
       },
     },
     external: ["react", "react-dom", "react/jsx-runtime"],
-    plugins: [wss("fluentui.js")],
-    experimental
+    plugins: [hmr("fluentui.js")],
+    experimental,
   },
 ];
 
