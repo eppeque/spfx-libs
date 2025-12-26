@@ -1,8 +1,8 @@
-(function(factory) {
-  
+(function(global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports =  factory() :
   typeof define === 'function' && define.amd ? define([], factory) :
-  factory();
-})(function() {
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, (global.HmrRuntime = factory()));
+})(this, function() {
 
 //#region esm/hmr-runtime.js
 	var __create = Object.create;
@@ -174,7 +174,7 @@
 		};
 		document.body.appendChild(script);
 	}
-	console.debug("HMR runtime loaded", "localhost:3000");
+	console.debug("HMR runtime loaded", "localhost:4321");
 	const addr = new URL("wss://localhost:4321");
 	const socket = new WebSocket(addr);
 	globalThis.__rolldown_runtime__ ??= new DefaultDevRuntime(socket);
@@ -194,6 +194,8 @@
 			else console.log("[hmr]: location is undefined, cannot reload page");
 		}
 	};
+	var hmr_runtime_default = DefaultDevRuntime;
 
 //#endregion
+return hmr_runtime_default;
 });
