@@ -75,6 +75,14 @@ const configs: BuildOptions[] = [
     plugins: [hmr("fluentui.js")],
     experimental,
   },
+  {
+    input: "esm/hmr-runtime.js",
+    output: {
+      file: "dist/hmr-runtime.js",
+      format: "umd",
+      name: "HmrRuntime",
+    },
+  },
 ];
 
 for (const config of configs) {
