@@ -10,7 +10,7 @@
 	var __getOwnPropNames = Object.getOwnPropertyNames;
 	var __getProtoOf = Object.getPrototypeOf;
 	var __hasOwnProp = Object.prototype.hasOwnProperty;
-	var __export = (all, symbols) => {
+	var __exportAll = (all, symbols) => {
 		let target = {};
 		for (var name in all) {
 			__defProp(target, name, {
@@ -49,7 +49,7 @@
 
 
 //#region esm/react.js
-	var react_exports = /* @__PURE__ */ __export({
+	var react_exports = /* @__PURE__ */ __exportAll({
 		Children: () => Children,
 		Component: () => Component,
 		Fragment: () => REACT_FRAGMENT_TYPE,

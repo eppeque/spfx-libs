@@ -11,7 +11,7 @@
 	var __getProtoOf = Object.getPrototypeOf;
 	var __hasOwnProp = Object.prototype.hasOwnProperty;
 	var __commonJSMin = (cb, mod) => () => (mod || cb((mod = { exports: {} }).exports, mod), mod.exports);
-	var __export = (all, symbols) => {
+	var __exportAll = (all, symbols) => {
 		let target = {};
 		for (var name in all) {
 			__defProp(target, name, {
@@ -761,7 +761,7 @@ react = __toESM(react);
 
 //#endregion
 //#region esm/react-dom.js
-	var react_dom_exports = /* @__PURE__ */ __export({
+	var react_dom_exports = /* @__PURE__ */ __exportAll({
 		__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: () => Internals,
 		createPortal: () => createPortal$1,
 		createRoot: () => createRoot$1,
