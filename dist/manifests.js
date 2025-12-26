@@ -39,6 +39,23 @@
   const t = [
     "<WebPartComponent>",
     {
+      id: "7a5e372b-42c4-416e-8c47-ef7a1ac01034",
+      alias: "HmrRuntime",
+      componentType: "Library",
+      version: "1.0.0",
+      manifestVersion: 2,
+      loaderConfig: {
+        internalModuleBaseUrls: ["https://localhost:4321/dist/"],
+        entryModuleId: "hmr-runtime",
+        scriptResources: {
+          "hmr-runtime": {
+            type: "path",
+            path: "hmr-runtime.js",
+          },
+        },
+      },
+    },
+    {
       id: "eab134f0-159f-4209-807e-d2d12ae7236e",
       alias: "React",
       componentType: "Library",
@@ -51,6 +68,11 @@
           react: {
             type: "path",
             path: "react.js",
+          },
+          "hmr-runtime": {
+            type: "component",
+            id: "7a5e372b-42c4-416e-8c47-ef7a1ac01034",
+            version: "1.0.0",
           },
         },
       },
@@ -68,6 +90,11 @@
           "react-dom": {
             type: "path",
             path: "react-dom.js",
+          },
+          "hmr-runtime": {
+            type: "component",
+            id: "7a5e372b-42c4-416e-8c47-ef7a1ac01034",
+            version: "1.0.0",
           },
           react: {
             type: "component",
@@ -91,6 +118,11 @@
             type: "path",
             path: "jsx-dev-runtime.js",
           },
+          "hmr-runtime": {
+            type: "component",
+            id: "7a5e372b-42c4-416e-8c47-ef7a1ac01034",
+            version: "1.0.0",
+          },
           react: {
             type: "component",
             id: "eab134f0-159f-4209-807e-d2d12ae7236e",
@@ -113,6 +145,11 @@
             type: "path",
             path: "jsx-runtime.js",
           },
+          "hmr-runtime": {
+            type: "component",
+            id: "7a5e372b-42c4-416e-8c47-ef7a1ac01034",
+            version: "1.0.0",
+          },
           react: {
             type: "component",
             id: "eab134f0-159f-4209-807e-d2d12ae7236e",
@@ -134,6 +171,11 @@
           "@fluentui/react-components": {
             type: "path",
             path: "fluentui.js",
+          },
+          "hmr-runtime": {
+            type: "component",
+            id: "7a5e372b-42c4-416e-8c47-ef7a1ac01034",
+            version: "1.0.0",
           },
           react: {
             type: "component",
